@@ -1,0 +1,80 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2em;
+    background-color: lightslategray;
+}
+
+h1{
+    margin: 5% 0px 5% 0px;
+}
+
+main{
+    display: flex;
+    width: 100%;
+}
+
+.quadro{
+    border: 1px solid black;
+    display: flex;
+    width: 300px;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: lightcyan;
+}
+
+.quadro div{
+    padding: 20px 0px 20px 5px;
+}
+
+.frases{
+    align-self: center;
+    border: 1px solid black;
+    padding: 100px;
+    width: 700px;
+    margin: 0px 20% 0px 15%;
+    text-align: center;
+    border-radius: 20px;
+    background-color: lightcyan;
+}
+
+#jargao{
+    padding-top: 30px;
+    font-size: 1.1em;
+}
+
+.botoes{
+    display: flex;
+    margin-top: 5%;
+}
+
+#btn{
+    border-radius: 20px;
+    padding: 10px;
+    border-style: none;
+    background-color: rgb(187, 220, 250);
+}
+
+#btn:hover{
+    background-color: rgb(83, 170, 241);
+}
+
+#btn_reset{
+    border-radius: 20px;
+    padding: 10px;
+    margin-left: 20px;
+    border-style: none;
+    background-color: rgb(252, 187, 187);
+}
+
+#btn_reset:hover{
+    background-color: rgb(253, 90, 78);
+}
+
