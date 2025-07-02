@@ -9,11 +9,12 @@ body{
     align-items: center;
     flex-direction: column;
     font-size: 2em;
-    background-color: lightslategray;
+    background-color: rgba(119, 136, 153, 0.637);
 }
 
 h1{
     margin: 5% 0px 5% 0px;
+    padding-left: 20%;
 }
 
 main{
@@ -24,10 +25,16 @@ main{
 .quadro{
     border: 1px solid black;
     display: flex;
-    width: 300px;
+    width: 500px;
     flex-direction: column;
     border-radius: 20px;
     background-color: lightcyan;
+    margin-left: 5%;
+    box-shadow: 5px 5px 5px white;
+}
+
+.quadro p{
+    text-align: center;
 }
 
 .quadro div{
@@ -43,6 +50,7 @@ main{
     text-align: center;
     border-radius: 20px;
     background-color: lightcyan;
+    box-shadow: 5px 5px 5px white;
 }
 
 #jargao{
@@ -53,6 +61,7 @@ main{
 .botoes{
     display: flex;
     margin-top: 5%;
+    margin-left: 19%;
 }
 
 #btn{

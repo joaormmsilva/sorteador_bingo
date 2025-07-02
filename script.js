@@ -2,11 +2,11 @@ let btn_sortear = document.getElementById('btn');
 let btn_resetar = document.getElementById('btn_reset');
 let numero_sorteado = document.getElementById('numero_sorteado');
 let frase = document.getElementById('jargao');
-let b_el = document.getElementById('b');
-let i_el = document.getElementById('i');
-let n_el = document.getElementById('n');
-let g_el = document.getElementById('g');
-let o_el = document.getElementById('o');
+let b = document.getElementById('b');
+let i = document.getElementById('i');
+let n = document.getElementById('n');
+let g = document.getElementById('g');
+let o = document.getElementById('o');
 let sorteador = [];
 
 function sortear() {
@@ -28,11 +28,25 @@ function sortear() {
 
     // Atualiza o campo de letras com os sorteados
     switch (letra) {
-        case 'B': b_el.innerHTML += numero + ' '; break;
-        case 'I': i_el.innerHTML += numero + ' '; break;
-        case 'N': n_el.innerHTML += numero + ' '; break;
-        case 'G': g_el.innerHTML += numero + ' '; break;
-        case 'O': o_el.innerHTML += numero + ' '; break;
+        case 'B': 
+        b.innerHTML += numero + '; ';
+        break;
+
+        case 'I':
+        i.innerHTML += numero + '; '; 
+        break;
+
+        case 'N': 
+        n.innerHTML += numero + '; '; 
+        break;
+
+        case 'G': 
+        g.innerHTML += numero + '; '; 
+        break;
+
+        case 'O': 
+        o.innerHTML += numero + '; '; 
+        break;
     }
 
     // Frases divertidas (jargões)
@@ -64,9 +78,9 @@ function reiniciar() {
     frase.innerHTML = '';
     sorteador = [];
 
-    b_el.innerHTML = '';
-    i_el.innerHTML = '';
-    n_el.innerHTML = '';
-    g_el.innerHTML = '';
-    o_el.innerHTML = '';
+    b.innerHTML = 'b = ';
+    i.innerHTML = 'i = ';
+    n.innerHTML = 'n = ';
+    g.innerHTML = 'g = ';
+    o.innerHTML = 'o = ';
 }
