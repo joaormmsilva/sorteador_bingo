@@ -33,7 +33,7 @@ function sortear() {
     else letra = 'O';
 
     
-    for (letra in colunas) {
+    for (let letra in colunas) {
         colunas[letra].forEach(li => {
             if (parseInt(li.textContent) === numero) {
                 li.style.background = "lightgreen";
@@ -43,25 +43,30 @@ function sortear() {
 
     let jargao = '';
     switch (numero) {
-        case 1: jargao = '---Começou o Jogo---'; break;
-        case 6: jargao = '---Meia dúzia---'; break;
-        case 7: jargao = '---O número da sorte---'; break;
-        case 8: jargao = '---O infinito---'; break;
-        case 9: jargao = '---O coqueiro---'; break;
-        case 10: jargao = '---Craque de Bola---'; break;
-        case 11: jargao = '---As pernas da moça---'; break;
-        case 22: jargao = '---Dois patinhos na lagoa---'; break;
-        case 33: jargao = '---A idade de Cristo---'; break;
-        case 45: jargao = '---Fim do Primeiro Tempo---'; break;
-        case 51: jargao = '---Uma Boa Ideia---'; break;
-        case 66: jargao = '---Um Tapa Atrás da Orelha---'; break;
-        case 69: jargao = '---O número do amor---'; break;
-        case 75: jargao = '---Terminou o Jogo---'; break;
+        case 1: jargao = 'Começou o Jogo'; break;
+        case 6: jargao = 'Meia dúzia'; break;
+        case 7: jargao = 'O número da sorte'; break;
+        case 8: jargao = 'O infinito'; break;
+        case 9: jargao = 'O coqueiro'; break;
+        case 10: jargao = 'Craque de Bola'; break;
+        case 11: jargao = 'As pernas da moça'; break;
+        case 22: jargao = 'Dois patinhos na lagoa'; break;
+        case 33: jargao = 'A idade de Cristo'; break;
+        case 45: jargao = 'Fim do Primeiro Tempo'; break;
+        case 51: jargao = 'Uma Boa Ideia'; break;
+        case 66: jargao = 'Um Tapa Atrás da Orelha'; break;
+        case 69: jargao = 'O número do amor'; break;
+        case 75: jargao = 'Terminou o Jogo'; break;
         default: jargao = ''; break;
     }
 
     numero_sorteado.innerHTML = `${letra} - ${numero}`;
+    
     frase.innerHTML = jargao;
+    if(jargao != ''){
+        window.alert(`${numero}-${jargao}`)
+    }
+    
 }
 
 function reiniciar() {
