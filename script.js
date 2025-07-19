@@ -8,6 +8,13 @@ let n = document.getElementById('n');
 let g = document.getElementById('g');
 let o = document.getElementById('o');
 let sorteador = [];
+const colunas = {
+    B: document.querySelectorAll('#b li'),
+    I: document.querySelectorAll('#i li'),
+    N: document.querySelectorAll('#n li'),
+    G: document.querySelectorAll('#g li'),
+    O: document.querySelectorAll('#o li')
+};
 
 function sortear() {
     let numero;
@@ -26,28 +33,17 @@ function sortear() {
     else if (numero >= 46 && numero <= 60) letra = 'G';
     else letra = 'O';
 
-    // Atualiza o campo de letras com os sorteados
-    switch (letra) {
-        case 'B': 
-        b.innerHTML += numero + '; ';
-        break;
-
-        case 'I':
-        i.innerHTML += numero + '; '; 
-        break;
-
-        case 'N': 
-        n.innerHTML += numero + '; '; 
-        break;
-
-        case 'G': 
-        g.innerHTML += numero + '; '; 
-        break;
-
-        case 'O': 
-        o.innerHTML += numero + '; '; 
-        break;
+    
+    for (letra in colunas) {
+        colunas[letra].forEach(li => {
+            if (parseInt(li.textContent) === numero) {
+                li.style.background = "lightgreen";
+            }
+        });
     }
+
+    // Atualiza o campo de letras com os sorteados
+    
 
     // Frases divertidas (jargões)
     let jargao = '';
@@ -66,7 +62,7 @@ function sortear() {
         case 66: jargao = '---Um Tapa Atrás da Orelha---'; break;
         case 69: jargao = '---O número do amor---'; break;
         case 75: jargao = '---Terminou o Jogo---'; break;
-        default: jargao = '----------------------------'; break;
+        default: jargao = ''; break;
     }
 
     numero_sorteado.innerHTML = `${letra} - ${numero}`;
@@ -78,9 +74,9 @@ function reiniciar() {
     frase.innerHTML = '';
     sorteador = [];
 
-    b.innerHTML = 'b = ';
-    i.innerHTML = 'i = ';
-    n.innerHTML = 'n = ';
-    g.innerHTML = 'g = ';
-    o.innerHTML = 'o = ';
+    const todosNumeros = document.querySelectorAll('.divs li');
+    todosNumeros.forEach(li => {
+        li.style.background = '';
+        li.style.color = '';
+    });
 }
