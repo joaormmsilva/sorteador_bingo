@@ -108,7 +108,7 @@ section{
 }
 
 
-@media(min-width: 300px){
+@media(max-width: 760px){
     body{
         flex-direction: column;
     }
@@ -128,7 +128,7 @@ section{
     }
 }
 
-@media(min-width: 760px){
+@media(max-width: 990px) {
     body{
         flex-direction: row;
         margin: 5px;
