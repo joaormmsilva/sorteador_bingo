@@ -108,7 +108,7 @@
 
 @media(min-width: 320px){
     body{
-        flex-direction: column;
+        flex-direction: column; 
     }
 
     .divs{
@@ -116,14 +116,22 @@
     }
 
     .quadro{
-    width: 90vh;
+    width: 450px;
     }
 
     .frases{
-    width: 90vh;
+    width: 450px;
     height: 150px;
     margin-top: 5%;
     }
+}
+
+@media (min-width: 600px) {
+  .divs {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
 }
 
 @media(min-width: 768px) {
@@ -135,11 +143,11 @@
     }
 
     .quadro{
-    width: 290px;
+    width: 400px;
     }
 
     .frases{
-    width: 290px;
+    width: 400px;
     height: 150px;
     margin-top: 5%;
     margin-left: 3%;
