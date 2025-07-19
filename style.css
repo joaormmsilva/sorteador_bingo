@@ -55,7 +55,6 @@
         text-align: center;
     }
 
-
     #jargao{
         width: 500px;
         padding-top: 30px;
@@ -76,7 +75,6 @@
         box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.651);
         text-align: center;
     }
-
 
     .botoes{
         display: flex;

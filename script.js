@@ -19,12 +19,11 @@ const colunas = {
 function sortear() {
     let numero;
 
-    // Evita números repetidos
     do {
         numero = Math.floor(Math.random() * 75) + 1;
     } while (sorteador.includes(numero));
 
-    sorteador.push(numero); // Salva no histórico
+    sorteador.push(numero);
 
     let letra = '';
     if (numero >= 1 && numero <= 15) letra = 'B';
@@ -42,10 +41,6 @@ function sortear() {
         });
     }
 
-    // Atualiza o campo de letras com os sorteados
-    
-
-    // Frases divertidas (jargões)
     let jargao = '';
     switch (numero) {
         case 1: jargao = '---Começou o Jogo---'; break;
